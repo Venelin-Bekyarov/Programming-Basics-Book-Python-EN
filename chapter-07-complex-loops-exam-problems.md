@@ -1,6 +1,6 @@
-# Chapter 7.2. More Complex Loops – Exam Problems
+# Chapter 7.2. More Complex Loops – Exam Tasks
 
-We **already learned** how to execute **a block of commands more than once** using a **`for`** loop. In the previous chapter, **we reviewed some loop structures** that would help us solve more complex problems like:
+We **already learned** how to execute **a block of commands more than once** using a **`for`** loop. In the previous chapter, **we reviewed some loop structures** that would help us solve more complex tasks like:
 
 - **loops with a step**
 - **nested** loops
@@ -10,12 +10,12 @@ We **already learned** how to execute **a block of commands more than once** usi
 - **`try-except`** construction
 
 
-## Exam Problems
+## Exam Tasks
 
-Let's start work on solving the following practical exam problems.
+Let's start work by solving the following practical exam tasks.
 
 
-## Problem: Dumb Passwords Generator
+## Task: Dumb Passwords Generator
 
 Write a program that enters two integers **n** and **l** and generates in alphabetical order all possible **"dumb” passwords"**, that consist of the following **5 characters**:
 
@@ -27,7 +27,6 @@ Write a program that enters two integers **n** and **l** and generates in alphab
 
 ### Input Data
 
-Входът се чете от конзолата и се състои от **две цели числа: n** и **l** в интервала [**1 … 9**], по едно на ред.
 The input is read from the console and consists of **two integers: n** and **l** within the range [**1 … 9**], one per line.
 
 ### Output Data
@@ -46,21 +45,21 @@ Print on the console **all "dumb" passwords in alphabetical order**, separated b
 
 ### Hints and Guidelines
 
-We can split the solution of the problem into 3 parts:
+We can split the solution of the task into 3 parts:
 
-* **Reading the input** – in the current problem, this includes reading two numbers **`n`** and **`l`**, each on a separate line.
+* **Reading the input** – in the current task, this includes reading two numbers **`n`** and **`l`**, each on a separate line.
 * **Processing the input data** – using nested loops to iterate through every possible symbol for each of the five password symbols.
 * **Printing the output** – printing every "dumb" password that meets the requirements.
 
 #### Reading and Processing the Input Data
 
-За For **reading** of **input** data we will declare two integer variables **`int`**: **`n`** and **`l`**.
+For **reading** of **input** data we will declare two integer variables **`int`**: **`n`** and **`l`**.
 
 ![](/assets/chapter-7-2-images/01.stupid-password-generator-1.png)
 
 #### Printing Output
 
-One of the ways to find a solution for this problem is to create **five** **`for`** nested loops, one for each variable. To ensure that the last digit is **greater** than the first two, we will use the built-in method **`max(…)`**:
+One of the ways to find a solution for this task is to create **five** **`for`** nested loops, one for each variable. To ensure that the last digit is **greater** than the first two, we will use the built-in method **`max(…)`**:
 
 ![](/assets/chapter-7-2-images/01.stupid-password-generator-2.png)
 
@@ -78,7 +77,7 @@ One of the ways to find a solution for this problem is to create **five** **`for
     
 ![](/assets/chapter-7-2-images/01.stupid-password-generator-5.png)
     
-* **Python** has a wide range of built-in functions and methods for working with strings. Look for more information on the following functions: **`str(number)`**, **`.lower()`**, **`.format(*args, **kwargs)`**, **`.swapcase()`**, **`.upper()`**.
+* **Python** has a wide range of built-in functions and methods for working with strings. Look for more information about the following functions: **`str(number)`**, **`.lower()`**, **`.format(*args, **kwargs)`**, **`.swapcase()`**, **`.upper()`**.
 
 
 ### Testing in the Judge System
@@ -86,7 +85,7 @@ One of the ways to find a solution for this problem is to create **five** **`for
 Test your solution here: [https://judge.softuni.org/Contests/Practice/Index/1058#0](https://judge.softuni.org/Contests/Practice/Index/1058#0).
 
 
-## Problem: Magic Numbers
+## Task: Magic Numbers
 
 Write a program that enters a single integer **magic** number and produces all possible **6-digit numbers** for which **the product of their digits is equal to the magical number**.
 
@@ -114,7 +113,7 @@ Print on the console **all magic numbers**, separated by **space**.
 
 ### Hints and Guidelines
 
-**The solution** of this problem follows the **same** conception (we have to generate all n combinations of the element). Follow the steps and try to solve the problem on your own:
+**The solution** of this task follows the **same** conception (we have to generate all n combinations of the element). Follow the steps and try to solve the task on your own:
 
 -	Declare and initialize an integer type **variable** **`int`** and read the **input** from the console.
 -	Nest **six `for` loops** one for each digit.
@@ -128,7 +127,7 @@ In the previous chapter, we reviewed other loop constructions. Let's look at the
 
 ![](/assets/chapter-7-2-images/02.magic-numbers-2.png)
 
-Then we will start writing **`while`** loops.
+Then we will start writing a **`while`** loops.
 - We will initialize **first digit**: **`a = 1`**.
 - We will set a **condition for each** loop: the digit will be less than or equal to 9.
 - At the **beginning** of each loop, we set a value of the **next** digit, in this case: **`b = 1`**. In the nested **`for`** loops, we initialize the variables in the inner loops at each increment of the outer ones. We want to do the same here.
@@ -137,16 +136,16 @@ Then we will start writing **`while`** loops.
 
 ![](/assets/chapter-7-2-images/02.magic-numbers-3.png)
 
-As we can see, we can solve a problem using different types of loops. Of course, each task has its most appropriate choice. To practice each type of loop – try to solve each of the following problems with all the learned loops.
+As we can see, we can solve a problem using different types of loops. Of course, each task has its most appropriate choice. To practice each type of loop – try to solve each of the following problems with all the learned type of loops.
 
 ### Testing in the Judge System
 
 Test your solution here: [https://judge.softuni.org/Contests/Practice/Index/1058#1](https://judge.softuni.org/Contests/Practice/Index/1058#1).
 
 
-## Problem: Stop Number
+## Task: Stop Number
 
-Write a program that prints on the console all numbers from **N** to **M**, that are **divisible by 2** and **3 without remainder**, in **reversed order**. We will read **one more** "stop" number from the console – **S**. If any of the numbers divisible by 2 and 3 **is equal to the stop number, it should not be printed** and the program should end. **Otherwise print all numbers up to N**, that meet the condition.
+Write a program that prints on the console all numbers from **N** to **M**, that are **divisible by 2** and **by 3 without remainder**, in **reversed order**. We will read **one more** "stop" number from the console – **S**. If any of the numbers divisible by 2 and by 3 **is equal to the stop number, it should not be printed** and the program should end. **Otherwise print all numbers up to N**, that meet the condition.
 
 ### Input Data
 
@@ -157,17 +156,17 @@ Read from the console 3 numbers, each on a single line:
 
 ### Output Data
 
-Print on the console on a single line all numbers, that meet the condition, separated by space.
+Print by the console on a single line all numbers, that meet the condition, separated by space.
 
 ### Sample Input and Output
 
 |Input|Output|Comments|
 |---|---|---|
-|1<br>30<br>15|30 24 18 12 6|Numbers from 30 to 1, that are divisible at the same time by 2 and 3 without remainder are: 30, 24, 18, 12 and 6. The number 15 **is not equal** to any, so the sequence **continues**.|
+|1<br>30<br>15|30 24 18 12 6|Numbers from 30 to 1, that are divisible at the same time by 2 and by 3 without remainder are: 30, 24, 18, 12 and 6. The number 15 **is not equal** to any, so the sequence **continues**.|
 
 |Input|Output|Comments|
 |---|---|---|
-|1<br>36<br>12|36 30 24 18|Numbers from 36 to 1, that are divisible at the same time by 2 and 3 without remainder are: 36, 30, 24, 18, 12 and 6. The number 12 **is equal** to the stop number, so **we stop by 18**.|
+|1<br>36<br>12|36 30 24 18|Numbers from 36 to 1, that are divisible at the same time by 2 and by 3 without remainder are: 36, 30, 24, 18, 12 and 6. The number 12 **is equal** to the stop number, so **we stop by 18**.|
 
 |Input|Output|
 |---|---|
@@ -175,10 +174,10 @@ Print on the console on a single line all numbers, that meet the condition, sepa
 
 ### Hints and Guidelines
 
-The problem can be divided into **four** logical parts:
+The task can be divided into **four** logical parts:
 * **Reading** the input from the console.
 * **Checking** all numbers in the given range, and then running a **loop**.
-* **Checking** the conditions of the problem according to every number in the given range.
+* **Checking** the conditions of the task according to every number in the given range.
 * **Printing** the numbers.
 
 The **first** part is ordinary - we read **three** integer numbers from the console
@@ -187,9 +186,9 @@ We have already seen examples of the **second** part – initialization of the *
 
 ![](/assets/chapter-7-2-images/03.stop-number-1.png)
 
-After we have initialized the **`for`**  loop, it is time for the **third** part of the problem - **checking** the condition if the given **number is divisible both by 2 and 3 without remainder**. We will do this using one simple **`if`** condition that we will leave to the reader to do by themselves.
+After we have initialized the **`for`**  loop, it is time for the **third** part of the task - **checking** the condition if the given **number is divisible both by 2 and by 3 without remainder**. We will do this using one simple **`if`** condition that we will leave to the reader to do by themselves.
 
-Another **tricky** part of this problem is that apart from the above check we need to do **another** one – whether the **number is equal to the "stop" number**, entered from the console on the third line. To do this check, the previous one has to be passed. For this reason, we will add another **`if`** statement that we will **nest in the previous one**. If the condition is **true**, we need to stop the program from printing. We can do this using a **`break`**, operator, and it will lead us **out** of the **`for`** loop.
+Another **tricky** part of this task is that apart from the above check we need to do **another** one – whether the **number is equal to the "stop" number**, entered from the console on the third line. To do that check, the previous one has to be passed. For this reason, we will add another **`if`** statement that we will **nest in the previous one**. If the condition is **true**, we need to stop the program from printing. We can do this using a **`break`**, operator, and it will lead us **out** of the **`for`** loop.
  
 If the **condition** that checks whether the number is equal with the "stop" number returns a **`false`**,  result, our program should **continue to print**. This covers the **fourth and last** part of our program.
 
@@ -198,7 +197,7 @@ If the **condition** that checks whether the number is equal with the "stop" num
 Test your solution here: [https://judge.softuni.org/Contests/Practice/Index/1058#2](https://judge.softuni.org/Contests/Practice/Index/1058#2).
 
 
-## Problem: Special Numbers
+## Task: Special Numbers
 
 Write a program that **reads one integer number N** and generates all possible **"special numbers** from **1111** to **9999**. To be considered **"special"** a number must correspond to the **following condition**:
 - **N to be divisible by each of its digits without remainder**.
@@ -229,14 +228,14 @@ Print on the console **all special numbers**, separated by **space**.
 
 ### Hints and Guidelines
 
-Solve the problem by yourself using what you learned from the previous two problems. Keep in mind the difference between operators for **integer division `//`** и **division with remainder `%`** in Python.
+Solve the task by yourself using what you learned from the previous two tasks. Keep in mind the difference between operators for **integer division `//`** и **division with remainder `%`** in Python.
 
 ### Testing in the Judge System
 
 Test your solution here: [https://judge.softuni.org/Contests/Practice/Index/1058#3](https://judge.softuni.org/Contests/Practice/Index/1058#3).
 
 
-## Problem: Digits
+## Task: Digits
 
 Write a program that reads from the console 1 integer within the range [**100 … 999**], and then prints it a predefined number of times – modifying it before each print, as follows:
 - If the number is divisible by **5** without remainder, **subtract** from it **its first digit**.
@@ -267,7 +266,7 @@ Print on the console **all integer numbers**, that is the result of the above-me
 
 ### Hints and Guidelines
 
-Solve the problem **by yourself**, using what you learned from the previous ones. Remember that you will need to define **different** variables for each digit of the input number.
+Solve the task **by yourself**, using what you learned from the previous ones. Remember that you will need to define **different** variables for each digit of the input number.
 
 ### Testing in the Judge System
 
