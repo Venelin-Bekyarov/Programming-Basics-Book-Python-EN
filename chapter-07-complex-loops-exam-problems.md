@@ -199,7 +199,7 @@ Test your solution here: [https://judge.softuni.org/Contests/Practice/Index/1058
 
 ## Task: Special Numbers
 
-Write a program that **reads one integer number N** and generates all possible **"special numbers** from **1111** to **9999**. To be considered **"special"** a number must correspond to the **following condition**:
+Write a program that **reads one integer number N** and generates all possible **"special numbers** from **1111** to **9999**. A nnumber is considered **"special"** when  correspond to the **following condition**:
 - **N to be divisible by each of its digits without remainder**.
 
 **Example:** upon **N = 16, 2418** is a special number:
@@ -228,7 +228,7 @@ Print on the console **all special numbers**, separated by **space**.
 
 ### Hints and Guidelines
 
-Solve the task by yourself using what you learned from the previous two tasks. Keep in mind the difference between operators for **integer division `//`** Ð¸ **division with remainder `%`** in Python.
+Solve the task by yourself using what you learned from the previous two tasks. Keep in mind the difference between operators for **integer division `//`** and **division with remainder `%`** in Python.
 
 ### Testing in the Judge System
 
@@ -242,7 +242,8 @@ Write a program that reads from the console 1 integer within the range [**100 â€
 - If the number is divisible by **3** without remainder, **subtract** from it **its second digit**.
 - If none of the above-mentioned conditions is valid, **add** to it **its third digit**.
 
-Print on the console **N lines**, and each line has **M numbers**, that are the result of the above actions. Let:
+Print on the console **N lines**, and each line has **M numbers**, that are the result of the above actions.
+Let:
 - N = sum of the first and second digits of the number.
 - M = sum of the first and third digits of the number.
 
