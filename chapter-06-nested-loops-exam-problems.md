@@ -1,6 +1,6 @@
 # Chapter 6.2. Nested loops – exam tasks
 
-In the previous chapter, we introduced **nested loops** and how to use them for **drawing** various kinds of **figures on the console**. We've learned how to print figures with different sizes, establishing suitable logic construction by using **single and nested `for`** loops in combination with different calculations and program logic:
+In the previous chapter, we introduced **nested loops** and using them **drawing** various kinds of **figures on the console**. We've learned how to print different size figures, establishing suitable logic construction using **single and nested `for`** loops in combination with different calculations and program logic:
 
 ```python
 for r in range(5):
@@ -10,7 +10,7 @@ for r in range(5):
     print("")
 ```
 
-We also learned the **operator `*`**, which lets you for defined by us **number** of times, a **given string** to be printed:
+We also learned about the **operator `*`**, which allows by defined **number** of times, a **given string** to be printed:
 
 ```python
 print_me = ('abc' * 2)
@@ -18,7 +18,7 @@ print_me = ('abc' * 2)
 
 ## Exam tasks
 
-Now let's solve some exam tasks to consolidate what we have learned and to develop our algorithmic thinking.
+Now let's solve some exam tasks to consolidate what we have learned so far and to develop our algorithmic thinking.
 
 ## Task: Drawing a fortress
 
@@ -30,7 +30,7 @@ The program input consists one element (argument) - **integer n** within the ran
 
 ### Output data
 
-Print on the console **n** text lines, depicting the **fortress**, just as in the examples below.
+Print on the console **n** text lines, depicting the **fortress**, just as the examples below.
 
 ### Sample Input and Output
 
@@ -44,7 +44,7 @@ Print on the console **n** text lines, depicting the **fortress**, just as in th
 
 ### Hints and guidelines
 
-By the set task condition, we can see that the **input data** will contain only one **integer** within the range [**3 … 1000**].  Therefore, we will convert the input value into **`int`** type:
+By the set task conditions, we can see that the **input data** will contain only one **integer** within the range [**3 … 1000**].  Therefore, we will convert the input value into **`int`** type:
 
 ![](/assets/chapter-6-2-images/01.Draw-fort-01.png)
 
@@ -53,26 +53,26 @@ After we've declared and initialized the input data, we have to divide the **for
 * body
 * base
 
-We can see from the examples, that the **roof** consists of **two towers** and **a middle part**. Each tower has a beginning **`/`**, middle part **`^`** and an end **`\`**.
+We can see from the examples, that the **roof** consists of **two towers** and **a middle part**. Each tower has a beginning **`/`**, a middle part **`^`** and an end **`\`**.
 
-By the set task condition the left and the right inner columns have a width of **`n / 2`**, therefore we can save this value as a separate **variable**, keeping in mind, that if we receive an **odd number** as input, the result of dividing by two will be a number with a whole and fractional part. In this case, we need **only the whole part** (in the set task condition we can see, that when the input is equal to **3** the count of **`^`** in the inner part column is equal to **1**, and input of **5** it is **3**), we can separate it with the function **`math.trunc(…)`** and to save only its value in our new variable:
+By the set task condition the left and the right inner columns have a width of **`n / 2`**, therefore we can save this value as a separate **variable**, keeping in mind, that if we receive an **odd number** as input, the result of dividing by two will be a number with a whole and fractional part. In this case, we need **only the whole part** (in the task conditions we can see, that when the input is equal to **3** the count of **`^`** in the inner part column is equal to **1**, and input of **5** equals **3**), we can separate it with the function **`math.trunc(…)`** and to save only its value in our new variable:
 
 ![](/assets/chapter-6-2-images/01.Draw-fort-02.png)
 
 <table><tr><td><img src="/assets/alert-icon.PNG" style="max-width:50px" /></td>
-<td>It's always a good practice, whenever we have an expression with value we intend to use <b>more than once</b>, to keep it in a variable. In this way, on the one hand, our code will be <b>easier to read</b>, and on the other hand, it will be <b>easier to correct</b> possible <b>errors</b>, as we will not have to look for each use of the expression separately. </td>
+<td>It's always a good practice, whenever we have an expression with value, that we intend to use <b>more than once</b>, to keep it in a variable. In this way, on the one hand, our code will be <b>easier to be read</b>, and on the other hand, it will be <b>easier to correct</b> possible <b>errors</b>, as we will not have to look for each use of the expression separately. </td>
 </tr></table>
 
-We also declare a second **variable**, which will keep **the value** of the part **between the two towers**. By the set task condition, we know that the total width of the fortress is **`n * 2`**. In addition, we have two towers with one slash for a start and one slash for an end (a total of 4 characters) and a width of **`col_size`**. Therefore, to get the number of characters in the middle part, we have to subtract the size of the towers from the width of the entire fortress: **`2 * n - 2 * col_size - 4`**.
+We also declare a second **variable**, which will keep **the value** of the part **between the two towers**. By the set task conditions, we know that the total width of the fortress is **`n * 2`**. In addition, we have two towers with a slash for a start and a slash for an end (a total of 4 characters) and a width of **`col_size`**. Therefore, to get the number of characters in the middle part, we have to subtract the size of the towers from the width of the entire fortress: **`2 * n - 2 * col_size - 4`**.
 
 ![](/assets/chapter-6-2-images/01.Draw-fort-03.png)
 
-To print the **roof** part, on the console we will use the **`format(…)`** method in comination with the operator **`*`**, which joins a given string **n** number of times:
+To print the **roof** part, on the console we will use the **`format(…)`** method in combination with the operator **`*`**, which joins a given string **n** number of times:
 
 ![](/assets/chapter-6-2-images/01.Draw-fort-04.png)
 
 <table><tr><td><img src="/assets/alert-icon.PNG" style="max-width:50px" /></td>
-<td><strong><code>\</code></strong> is a special symbol in Python and using it solely in the method <strong><code>print(…)</code></strong>, the console will not print it out, so with <strong><code>\\</code></strong> we indicate on the console, that we want to print out exactly this character, without interpreting it as special character (<b>we screen it </b>, in English this is called “<b>character escaping</b>”).</td>
+<td><strong><code>\</code></strong> is a special symbol in Python that is used solely in the method <strong><code>print(…)</code></strong>. The console will not print it out, so with <strong><code>\\</code></strong> we indicate, that we want to print out exactly this character, without interpreting it as special character (<b>we screen it </b>, in English this is called “<b>character escaping</b>”).</td>
 </tr></table>
 
 **The fortress body** consists of beginning **`|`**, middle part **`(white spaces)`** and an end **`|`**. **The middle part** of white spaces has a width of **`2 * n - 2`**. The number of **rows** for the walls can be determined from the given examples: **`n - 3`**:
