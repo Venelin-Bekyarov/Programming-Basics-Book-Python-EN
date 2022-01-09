@@ -75,11 +75,11 @@ To print the **roof** part, on the console we will use the **`format(…)`** met
 <td><strong><code>\</code></strong> is a special symbol in Python that is used solely in the method <strong><code>print(…)</code></strong>. The console will not print it out, so with <strong><code>\\</code></strong> we indicate, that we want to print out exactly this character, without interpreting it as special character (<b>we screen it </b>, in English this is called “<b>character escaping</b>”).</td>
 </tr></table>
 
-**The fortress body** consists of beginning **`|`**, middle part **`(white spaces)`** and an end **`|`**. **The middle part** of white spaces has a width of **`2 * n - 2`**. The number of **rows** for the walls can be determined from the given examples: **`n - 3`**:
+**The fortress body** consists of beginning **`|`**, a middle part **`(white spaces)`** and an end **`|`**. **The middle part** of white spaces has a width of **`2 * n - 2`**. The number of **rows** for the walls can be determined from the given examples: **`n - 3`**:
 
 ![](/assets/chapter-6-2-images/01.Draw-fort-05.png)
 
-In order to draw a penultimate row, which is part of the base, we need to print a beginning **`|`**, middle part **`(white space)_(white space)`** and an end **`|`**. To do this, we can use already declared variables **`col_size`** and **`mid_size`** because as we see from the examples they are equal to the number of **`_`** in the roof:
+In order to draw a penultimate row, which is part of the base, we need to print a beginning **`|`**, a middle part **`(white space)_(white space)`** and an end **`|`**. To do that, we can use already declared variables **`col_size`** and **`mid_size`** because as we see from the examples they are equal to the number of **`_`** in the roof:
 
 ![](/assets/chapter-6-2-images/01.Draw-fort-06.png)
 
@@ -130,11 +130,11 @@ To draw the upper wing we make a loop repeated **`half_row_size`** number of tim
 
 ![](/assets/chapter-6-2-images/02.Butterfly-03.png)
 
-We can see in the examples, that on an **even** row we have a beginning **`*`**, middle part **`\ /`** and an end **`*`**, on the other hand on an **odd** row we have a beginning **`-`**, middle part **`\ /`** and an end **`-`**. Therefore, at each iteration of the loop, we have to do an **`if-else`** check to see whether the row that we print is even or odd. From the examples given in the set condition, we can see that the number of star characters and dashes on each row is equal to **`n - 2`**, i. e. we can use again the variable **`half_row_size`** to print them: 
+We can see in the examples, that on an **even** row we have a beginning **`*`**, a middle part **`\ /`** and an end **`*`**, on the other hand on an **odd** row we have a beginning **`-`**, a middle part **`\ /`** and an end **`-`**. Therefore, at each iteration of the loop, we have to do an **`if-else`** check to see whether the row that we print is even or odd. From the examples given in the set conditions, we can see that the number of star characters and dashes on each row is equal to **`n - 2`**, i. e. we can use again the variable **`half_row_size`** to print them: 
 
 ![](/assets/chapter-6-2-images/02.Butterfly-04.png)
 
-In order to draw the **the butterfly body**, we have to print exactly  **one** row on the console. The structure of the body has a beginning **`(white space)`**, middle part **`@`** and an end **`(white space)`**. From the examples we can see, that the number of the white spaces is equal to **`n-1`**:
+In order to draw **the butterfly body**, we have to print exactly  **one** row on the console. The structure of the body has a beginning **`(white space)`**, a middle part **`@`** and an end **`(white space)`**. From the examples we can see, that the number of the white spaces is equal to **`n-1`**:
 
 ![](/assets/chapter-6-2-images/02.Butterfly-05.png)
 
@@ -173,7 +173,7 @@ As in the previous examples, **the input data** will be on one line, which will 
 
 ![](/assets/chapter-6-2-images/03.Stop-01.png)
 
-We can **divide** the figure into **3 parts** - upper, middle and lower. **The upper part** consists of two subparts - a starting line and lines in which the sign widens. **The starting line** consists of beginning **`.`**, middle part **`_`** and an end **`.`**. After looking at the examples, we can see that the beginning has a size of **`n + 1`** and it's better to keep this **value** as a separate **variable**. We also have to create a second **variable**, in which we will keep **the value** of the **first row middle part** which has a size of **`2 * n + 1`**:
+We can **divide** the figure into **3 parts** - upper, middle and lower. **The upper part** consists of two subparts - a starting line and lines in which the sign widens. **The starting line** consists of beginning **`.`**, a middle part **`_`** and an end **`.`**. After looking at the examples, we can see that the beginning has a size of **`n + 1`** and it's better to keep this **value** as a separate **variable**. We also have to create a second **variable**, in which we will keep **the value** of the **first row middle part** which has a size of **`2 * n + 1`**:
 
 ![](/assets/chapter-6-2-images/03.Stop-02.png)
 
@@ -181,19 +181,19 @@ Once we have declared and initialized the two variables, we can print the first 
 
 ![](/assets/chapter-6-2-images/03.Stop-03.png)
 
-In order to draw the rows in which the sign is getting **"wider"**, we have to create a **loop**, that iterates **`n`** number of times. The row structure consists of a beginning **`.`**, **`//`** + middle part **`_`** + **`\\`** and an end **`.`**. In order to reuse the already created **variables**, we have to decrease **`dots`** by 1 and **`underscores`** by 2, because we've already **printed** the first row, and the dots and underscores in the top part of the figure are **decreasing** on each row:
+In order to draw the rows in which the sign is getting **"wider"**, we have to create a **loop**, that iterates **`n`** number of times. The row structure consists of a beginning **`.`**, **`//`** + a middle part **`_`** + **`\\`** and an end **`.`**. In order to reuse the already created **variables**, we have to decrease **`dots`** by 1 and **`underscores`** by 2, because we've already **printed** the first row, the dots and underscores in the top part of the figure are **decreasing** on each row:
 
 ![](/assets/chapter-6-2-images/03.Stop-04.png)
 
-At each subsequent iteration **the beginning** and **the end** decrease by 1, and **the middle part** increases by 2:
+At each subsequent iteration **the beginning** and **the end** decreases by 1, and **the middle part** increases by 2:
 
 ![](/assets/chapter-6-2-images/03.Stop-05.png)
 
-**The middle part** of the figure begins with **`//`** + **`_`**, middle part **`STOP!`** and an end **`_`** + **`\\`**. The count of the underscores **`_`** is **`(underscores - 5) / 2`**:
+**The middle part** of the figure begins with **`//`** + **`_`**, a middle part **`STOP!`** and an end **`_`** + **`\\`**. The count of the underscores **`_`** is **`(underscores - 5) / 2`**:
 
 ![](/assets/chapter-6-2-images/03.Stop-06.png)
 
-**The lower part** of the figure, in which the width of the sign **decreases**, can be done by creating a **loop**, that iterates **`n`** number of times. The structure of a row should have a beginning **`.`** + **`\\`**, middle part **`_`** and an end **`//`** + **`.`**. The number of the **dots** in the first loop iteration has to be 0 and on each subsequent have to **increase** by one. Therefore we can say that the **the dots in the lower part of the figure** are equal to **`i`**. To ensure proper operation of our program, on each **loop** iteration, we have to **decrease** the number of **`_`** by **2**:
+**The lower part** of the figure, in which the width of the sign **decreases**, can be done by creating a **loop**, that iterates **`n`** number of times. The structure of a row should have a beginning **`.`** + **`\\`**, a middle part **`_`** and an end **`//`** + **`.`**. The number of the **dots** in the first loop iteration has to be 0 and on each subsequent iteration have to **increase** by one. Therefore we can say that the **the dots in the lower part of the figure** are equal to **`i`**. To ensure proper operation of our program, on each **loop** iteration, we have to **decrease** the number of **`_`** by **2**:
 
 ![](/assets/chapter-6-2-images/03.Stop-07.png)
 
@@ -246,11 +246,11 @@ To draw **the body of the arrow**, we have to create **a loop**, which iterates 
 
 ![](/assets/chapter-6-2-images/04.Arrow-05.png)
 
-**The middle part of the figure** is made of a beginning **`#`**, middle part **`.`** and an end **`#`**. The count of **`#`** is equal to **`outer_dots`** and that is why we will use the same **variable**:
+**The middle part of the figure** is made of a beginning **`#`**, a middle part **`.`** and an end **`#`**. The count of **`#`** is equal to **`outer_dots`** and that is why we will use the same **variable**:
 
 ![](/assets/chapter-6-2-images/04.Arrow-06.png)
 
-In order to draw **the lower part of the arrow**, we have to assign new values of the two **variables** **`outer_dots`** and **`inner_dots`**.
+In order to draw **the lower part of the arrow**, we have to assign new values to the two **variables** **`outer_dots`** and **`inner_dots`**.
 
 ![](/assets/chapter-6-2-images/04.Arrow-07.png)
 
@@ -258,7 +258,7 @@ On each loop iteration **`outer_dots`** increases by 1, and **`inner_dots`** dec
 
 ![](/assets/chapter-6-2-images/04.Arrow-08.png)
 
-**The last row** of our figure is made of a beginning **`.`**, middle part **`#`** and an end **`.`**. The count of **`.`** is equal to **`outer_dots`**:
+**The last row** of our figure is made of a beginning **`.`**, a middle part **`#`** and an end **`.`**. The count of **`.`** is equal to **`outer_dots`**:
    
 ![](/assets/chapter-6-2-images/04.Arrow-09.png)
 
